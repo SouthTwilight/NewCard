@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://s55pyq843rhf"]
+
+[ext_resource type="PackedScene" uid="uid://bwhphcsyodk05" path="res://scenes/card_target_selector/card_arc.tscn" id="1_dnal8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2m1is"]
+size = Vector2(4, 4)
+
+[node name="CardTargetSelector" type="Node2D" unique_id=451336188]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=45321642]
+collision_mask = 4
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=6777836]
+shape = SubResource("RectangleShape2D_2m1is")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1572141760]
+layer = 2
+
+[node name="CardArc" parent="CanvasLayer" unique_id=403439210 instance=ExtResource("1_dnal8")]

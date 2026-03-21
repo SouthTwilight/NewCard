@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://b2guj3d34kklw"]
+
+[ext_resource type="FontFile" uid="uid://jl7vawmj2ydl" path="res://assets/font/LanternMingA.ttf" id="1_470mv"]
+
+[resource]
+default_font = ExtResource("1_470mv")
+default_font_size = 16

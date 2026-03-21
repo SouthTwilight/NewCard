@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://dllx1q51yc3hb"]
+
+[ext_resource type="Texture2D" uid="uid://dihety7xusn3d" path="res://assets/scenes/剑宗守山崖.jpeg" id="1_p7aow"]
+[ext_resource type="PackedScene" uid="uid://5h7hmju6p4cd" path="res://scenes/card_ui/card_ui.tscn" id="2_6en87"]
+[ext_resource type="Script" uid="uid://0d2f8s2056ky" path="res://scenes/ui/hand.gd" id="2_wq6iy"]
+[ext_resource type="PackedScene" uid="uid://s55pyq843rhf" path="res://scenes/card_target_selector/card_target_selector.tscn" id="3_pll4o"]
+[ext_resource type="Resource" uid="uid://b0rtfpr3kcjtb" path="res://characters/SwordSect/BigBrother/cards/sword_axe_attack.tres" id="4_53mgl"]
+[ext_resource type="Resource" uid="uid://b1d7xufygg67m" path="res://characters/SwordSect/BigBrother/cards/sword_block.tres" id="5_gj1re"]
+[ext_resource type="Texture2D" uid="uid://dkn4ug8ug8nrw" path="res://assets/charactors/swordSect/【终稿】人物_剑宗_执法阁铭离2.png" id="6_gj1re"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7aow"]
+size = Vector2(1900, 720)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gj1re"]
+
+[node name="Battle" type="Node2D" unique_id=1929757472]
+metadata/_edit_lock_ = true
+
+[node name="Backgroud" type="Sprite2D" parent="." unique_id=2110847613]
+modulate = Color(0.5689727, 0.56897277, 0.5689727, 1)
+scale = Vector2(1.4999999, 1.4972223)
+texture = ExtResource("1_p7aow")
+centered = false
+
+[node name="CardDorpArea" type="Area2D" parent="." unique_id=247813048]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CardDorpArea" unique_id=521653245]
+position = Vector2(960, 360)
+scale = Vector2(1.0110775, 1)
+shape = SubResource("RectangleShape2D_p7aow")
+debug_color = Color(0, 0.6, 0.69803923, 0.16862746)
+
+[node name="Enemy" type="Area2D" parent="." unique_id=838819972]
+position = Vector2(971, 416)
+scale = Vector2(1.0045842, 1)
+collision_layer = 4
+
+[node name="EnemyCharactor" type="Sprite2D" parent="Enemy" unique_id=2029747110]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("6_gj1re")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=856375775]
+position = Vector2(-40, 0)
+scale = Vector2(7.3592315, 10.733851)
+shape = SubResource("CapsuleShape2D_gj1re")
+
+[node name="CardTargetSelector" parent="." unique_id=451336188 instance=ExtResource("3_pll4o")]
+
+[node name="BattleUI" type="CanvasLayer" parent="." unique_id=1916020029 groups=["ui_layer"]]
+
+[node name="Hand" type="HBoxContainer" parent="BattleUI" unique_id=849702246]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -800.0
+offset_top = -240.0
+offset_right = 800.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("2_wq6iy")
+
+[node name="CardUI" parent="BattleUI/Hand" unique_id=1870895044 instance=ExtResource("2_6en87")]
+layout_mode = 2
+card = ExtResource("4_53mgl")
+
+[node name="CardUI2" parent="BattleUI/Hand" unique_id=1559179501 instance=ExtResource("2_6en87")]
+layout_mode = 2
+card = ExtResource("4_53mgl")
+
+[node name="CardUI3" parent="BattleUI/Hand" unique_id=666133881 instance=ExtResource("2_6en87")]
+layout_mode = 2
+card = ExtResource("5_gj1re")
