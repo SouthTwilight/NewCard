@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bwhphcsyodk05"]
 
+[ext_resource type="Texture2D" uid="uid://bs7hnk1dq6kwj" path="res://assets/icons/SwordSectIcons/PointingArrow.png" id="1_arrow"]
+
 [sub_resource type="Curve" id="Curve_j42f0"]
 _limits = [0.2, 1.0, 0.0, 1.0]
 _data = [Vector2(0, 0.2), 0.0, 0.0, 0, 0, Vector2(0.81308407, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.2449438), 0.0, 0.0, 0, 0]
@@ -9,4 +11,5 @@ point_count = 3
 position = Vector2(0, -1)
 width = 30.0
 width_curve = SubResource("Curve_j42f0")
+texture = ExtResource("1_arrow")
 texture_mode = 1
