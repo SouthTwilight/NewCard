@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CardPile" format=3 uid="uid://caf83cwxfd5y0"]
+
+[ext_resource type="Script" uid="uid://b5t1q4s6uqbn7" path="res://custom_resources/card.gd" id="1_bglne"]
+[ext_resource type="Script" uid="uid://bdkcbhcucecww" path="res://custom_resources/card_pile.gd" id="2_ihc5k"]
+
+[sub_resource type="Resource" id="Resource_bglne"]
+script = ExtResource("1_bglne")
+id = "sword_block"
+type = 1
+target = 1
+metadata/_custom_type_script = "uid://b5t1q4s6uqbn7"
+
+[sub_resource type="Resource" id="Resource_ihc5k"]
+script = ExtResource("1_bglne")
+id = "sword_axe_attack"
+metadata/_custom_type_script = "uid://b5t1q4s6uqbn7"
+
+[resource]
+script = ExtResource("2_ihc5k")
+cards = Array[ExtResource("1_bglne")]([SubResource("Resource_bglne"), SubResource("Resource_bglne"), SubResource("Resource_bglne"), SubResource("Resource_bglne"), SubResource("Resource_bglne"), SubResource("Resource_bglne"), SubResource("Resource_ihc5k"), SubResource("Resource_ihc5k"), SubResource("Resource_ihc5k"), SubResource("Resource_ihc5k"), SubResource("Resource_ihc5k")])
+metadata/_custom_type_script = "uid://bdkcbhcucecww"

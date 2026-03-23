@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(identify \"G:/project/godot/card/assets/icons/SwordSectIcons/PointingArrow.png\")"
+    ]
+  }
+}

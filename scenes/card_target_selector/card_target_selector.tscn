@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://s55pyq843rhf"]
 
-[ext_resource type="PackedScene" uid="uid://bwhphcsyodk05" path="res://scenes/card_target_selector/card_arc.tscn" id="1_dnal8"]
 [ext_resource type="Script" uid="uid://b6ulde57goq5x" path="res://scenes/card_target_selector/card_target_selector.gd" id="1_s6vcj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2m1is"]
@@ -20,7 +19,7 @@ shape = SubResource("RectangleShape2D_2m1is")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1572141760]
 layer = 2
 
-[node name="CardArc" parent="CanvasLayer" unique_id=403439210 instance=ExtResource("1_dnal8")]
+[node name="ArrowContainer" type="Node2D" parent="CanvasLayer" unique_id=1256375812]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
