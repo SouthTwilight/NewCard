@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bwhphcsyodk05"]
+
+[ext_resource type="Texture2D" uid="uid://bs7hnk1dq6kwj" path="res://assets/icons/SwordSectIcons/PointingArrow.png" id="1_arrow"]
+
+[sub_resource type="Curve" id="Curve_j42f0"]
+_limits = [0.2, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 0.2), 0.0, 0.0, 0, 0, Vector2(0.81308407, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.2449438), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="CardArc" type="Line2D" unique_id=403439210]
+position = Vector2(0, -1)
+width = 8.0
+default_color = Color(1, 0.843, 0.6, 1)
+texture_mode = 1
+
+[node name="ArrowHead" type="Sprite2D" parent="."]
+scale = Vector2(0.08, 0.08)
+modulate = Color(1, 0.843, 0.6, 1)
+texture = ExtResource("1_arrow")
+centered = true
+offset = Vector2(0, 512)

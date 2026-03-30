@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Stats" format=3 uid="uid://b4q8a1xabf75q"]
+
+[ext_resource type="Texture2D" uid="uid://w2evs7jcn54w" path="res://assets/enemies/【终稿】敌人_剑宗_剑侍_向左4.png" id="1_ke3bo"]
+[ext_resource type="Script" uid="uid://bjgqjeihh7qs5" path="res://custom_resources/stats.gd" id="2_ke3bo"]
+
+[resource]
+script = ExtResource("2_ke3bo")
+max_health = 200
+arc = ExtResource("1_ke3bo")
+description = "剑侍：待补充"
+metadata/_custom_type_script = "uid://bjgqjeihh7qs5"
